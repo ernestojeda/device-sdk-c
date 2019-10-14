@@ -22,4 +22,6 @@ cp /edgex-c-sdk/build/release/release.log /edgex-c-sdk/results
 
 # Set ownership of generated files
 
-chown -R $UID:$GID /edgex-c-sdk/results
+if [ ! -z "$JENKINS_URL" ]; then
+  chown -R $UID:$GID /edgex-c-sdk/results
+fi
