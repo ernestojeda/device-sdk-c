@@ -21,7 +21,7 @@ cp /edgex-c-sdk/build/release/csdk-*.tar.gz /edgex-c-sdk/results
 cp /edgex-c-sdk/build/release/release.log /edgex-c-sdk/results
 
 # Set ownership of generated files
-
+# This breaks on with new Jenkins build process
 if [ ! -z "$JENKINS_URL" ]; then
   chown -R $UID:$GID /edgex-c-sdk/results
 fi

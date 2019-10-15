@@ -20,7 +20,8 @@ edgeXBuildDocker (
     project: 'device-sdk-c',
     dockerFilePath: './scripts/Dockerfile.alpine-3.9',
     pushImage: false,
-    archiveImage: true
+    archiveImage: true,
+    archiveName: 'csdk-image.tar.gz'
 )
 
 def loadGlobalLibrary(branch = '*/master') {
